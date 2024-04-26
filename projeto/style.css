@@ -92,11 +92,16 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
 
+  animation: deslize-outrolado 0.2s;
 }
 
+
 .light #switch button {
-  right: 0;
-  left: initial;
+      animation: deslize-botao-dark-light 0.4s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--hightlight-color);
 }
 
 
@@ -180,4 +185,27 @@ justify-content: center;
 
 footer{
   text-align: center;
+}
+
+/* animation */
+
+@keyframes deslize-botao-dark-light {
+
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+
+}
+
+@keyframes deslize-outrolado {
+  from {
+    left: 50%
+  }
+  to {
+    left: 0;
+  }
 }
